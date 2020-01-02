@@ -42,7 +42,7 @@ while running:
 
     # Draw / Render
     screen.fill(BLACK)
-    all_sprites.draw()
+    all_sprites.draw(screen)
 
     # *after* drawing everything
     pygame.display.flip()
