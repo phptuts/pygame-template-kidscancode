@@ -23,6 +23,8 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('My Game')
 clock = pygame.time.Clock()
 
+all_sprites = pygame.sprite.Group()
+
 running = True
 
 while running:
@@ -36,8 +38,11 @@ while running:
             running = False
 
     # Update
+    all_sprites.update()
+
     # Draw / Render
     screen.fill(BLACK)
+    all_sprites.draw()
 
     # *after* drawing everything
     pygame.display.flip()
